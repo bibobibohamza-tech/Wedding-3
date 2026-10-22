@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>دعوة زفاف | محمد &amp; خلود</title>
   
-  <!-- Open Graph للظهور الفخم عند المشاركة على واتساب وفيسبوك -->
+  <!-- إعدادات المشاركة الفاخرة على واتساب وفيسبوك -->
   <meta property="og:title" content="دعوة زفاف | محمد &amp; خلود">
   <meta property="og:description" content="يتشرف الأستاذ / محسن خليل والعميد / حمزه الدخميسى بدعوتكم لحفل الزفاف - 5 نوفمبر 2026">
   <meta property="og:type" content="website">
 
-  <!-- الخطوط العربية الفاخرة وأيقونات Font Awesome -->
+  <!-- الخطوط العربية والأيقونات وتأثيرات الكونفيتي -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Cinzel+Decorative:wght@700&family=Marhey:wght@300;500;700&family=Reem+Kufi:wght@400;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Cinzel+Decorative:wght@700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
@@ -52,7 +52,7 @@
       position: relative;
     }
 
-    /* تساقط بتلات الزهور الذهبية */
+    /* تساقط البتلات الذهبية الهادئة */
     .petals-container {
       position: fixed;
       inset: 0;
@@ -107,7 +107,7 @@
       50% { transform: scale(1.22); color: var(--gold-light); }
     }
 
-    /* المشهد الأول: الظرف الملكي */
+    /* المشهد الأول: الظرف الملكي والختم الشمعي */
     #envelope-screen {
       position: fixed;
       inset: 0;
@@ -172,7 +172,7 @@
       display: inline-block;
     }
 
-    /* مجسم الظرف */
+    /* مجسم الظرف 3D */
     .envelope-wrapper {
       position: relative;
       width: 350px;
@@ -335,7 +335,7 @@
       50% { opacity: 1; transform: translateY(-3px); }
     }
 
-    /* صفحة الدعوة بعد الفتح */
+    /* صفحة الدعوة الرئيسية */
     #main-invitation {
       max-width: 760px;
       margin: 0 auto;
@@ -553,5 +553,160 @@
       gap: 10px;
       box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
       transition: all 0.3s ease;
-      text
-    
+      text-decoration: none;
+      font-family: 'Tajawal', sans-serif;
+    }
+    .royal-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+      background: linear-gradient(135deg, #f3e5ab 0%, #c9a050 100%);
+      color: #000;
+    }
+    .royal-btn.outline {
+      background: transparent;
+      color: var(--gold-light);
+      border: 1.5px solid var(--gold-primary);
+      box-shadow: none;
+    }
+    .royal-btn.outline:hover {
+      background: rgba(212, 175, 55, 0.15);
+      border-color: var(--gold-light);
+    }
+
+    /* نافذة الـ RSVP المنبثقة */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-content {
+      background: linear-gradient(145deg, #141a24, #0b0f16);
+      border: 1px solid var(--gold-primary);
+      border-radius: 16px;
+      max-width: 480px;
+      width: 100%;
+      padding: 35px 25px;
+      position: relative;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+      transform: scale(0.9);
+      transition: transform 0.4s ease;
+      text-align: right;
+    }
+    .modal-overlay.active .modal-content {
+      transform: scale(1);
+    }
+    .close-modal-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: transparent;
+      border: none;
+      color: var(--gold-primary);
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: var(--gold-light);
+    }
+    .form-control {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 12px 14px;
+      border-radius: 8px;
+      color: #fff;
+      font-family: 'Tajawal', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .form-control:focus {
+      border-color: var(--gold-light);
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .radio-pill-group {
+      display: flex;
+      gap: 10px;
+    }
+    .radio-pill-group label {
+      flex: 1;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: 0.3s;
+    }
+    .radio-pill-group input[type="radio"] {
+      display: none;
+    }
+    .radio-pill-group input[type="radio"]:checked + label {
+      background: rgba(212, 175, 55, 0.2);
+      border-color: var(--gold-primary);
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+
+    .success-alert {
+      display: none;
+      text-align: center;
+      padding: 20px;
+    }
+    .success-alert i {
+      font-size: 3rem;
+      color: #4BB543;
+      margin-bottom: 15px;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ملف الموسيقى (music.mp3) -->
+  <audio id="weddingAudio" src="music.mp3" loop preload="auto"></audio>
+
+  <!-- مؤثرات تساقط البتلات الذهبية -->
+  <div class="petals-container" id="petals"></div>
+
+  <!-- زر التحكم في الصوت العائم -->
+  <button class="floating-audio-btn" id="audioToggle" title="تشغيل / إيقاف الموسيقى">
+    <i class="fa-solid fa-volume-xmark"></i>
+  </button>
+
+  <!-- ================= المشهد الأول: الظرف الملكي والختم ================= -->
+  <div id="envelope-screen">
+    <div class="top-royal-banner">
+      <div class="monogram-badge">
+        <span>م ❦ خ</span>
+      </div>
+      <div>
+        <span class="royal-date-tag">5 . 11 . 2026</span>
+      </div>
+    </div>
+
+    <!-- الظرف التفاعلي -->
+    <div class="envelop
